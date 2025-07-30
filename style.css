@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2.subtitle {
+  color: #c00;
+  margin-top: 1rem;
+}
+
+.nav-buttons {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-buttons a, .nav-buttons button {
+  padding: 0.5rem 1rem;
+  background-color: #c00;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.month {
+  border: 1px solid #ccc;
+}
+
+.month h2 {
+  background: #c00;
+  color: white;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: #eee;
+  font-weight: bold;
+}
+
+.day-names span,
+.dates span {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.holiday {
+  color: red;
+  font-weight: bold;
+}
+
+.religious {
+  background-color: #ffe5e5;
+}
+
+.national {
+  background-color: #ffe;
+}
+
+.today {
+  outline: 2px solid #f00;
+  background: #ffefef;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem auto;
+}
+
+.legend span {
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.national-box {
+  background-color: #ffe;
+}
+
+.religious-box {
+  background-color: #ffe5e5;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.modal button {
+  margin-top: 1rem;
+  background: #c00;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .calendar {
+    grid-template-columns: 1fr;
+  }
+}
